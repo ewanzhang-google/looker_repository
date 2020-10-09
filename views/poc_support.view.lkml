@@ -2,8 +2,17 @@ view: poc_support {
   sql_table_name: `dwh_poc.poc_support`
     ;;
 
-  dimension: created_date {
-    type: string
+  dimension_group: created_date {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.created_date ;;
   }
 
