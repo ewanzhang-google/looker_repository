@@ -13,7 +13,7 @@ view: poc_support {
       quarter,
       year
     ]
-    sql: ${TABLE}.created_date ;;
+    sql: TIMESTAMP(${TABLE}.created_date) ;;
   }
 
   dimension: doc_id {
